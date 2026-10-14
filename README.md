@@ -45,3 +45,27 @@ El diseño se basa en componentes de bajo costo verificados eléctricamente ante
 | **LED RGB** | Señalización óptica del estado del sistema (normal, advertencia postural, alarma de caída) | \$5.00 |
 | **Módulo TP4056** | Gestión y protección de carga para batería Li-Po/Li-Ion de alimentación portátil | ~\$25.00 |
 | **Total Estimado** | | **\$280.00 MXN** |
+
+```mermaid
+flowchart LR
+    subgraph Alimentacion [Alimentación y Batería]
+        TP["Módulo TP4056"] -->|"OUT+ / 5V"| ESP_VIN["ESP32: VIN / 5V"]
+        TP -->|"OUT- / GND"| ESP_GND1["ESP32: GND"]
+    end
+    
+    subgraph Sensor [Sensor IMU I2C]
+        ESP_3V3["ESP32: 3V3"] -->|"3.3V"| MPU_VCC["MPU-6050: VCC"]
+        ESP_GND2["ESP32: GND"] -->|"GND"| MPU_GND["MPU-6050: GND"]
+        ESP_D21["ESP32: GPIO 21"] <-->|"SDA"| MPU_SDA["MPU-6050: SDA"]
+        ESP_D22["ESP32: GPIO 22"] <-->|"SCL"| MPU_SCL["MPU-6050: SCL"]
+    end
+    
+    subgraph Alertas [Actuadores y Señalización]
+        ESP_D18["ESP32: GPIO 18"] -->|"Señal"| BUZZ["Buzzer Activo (+)"]
+        ESP_GND3["ESP32: GND"] --- BUZZ_GND["Buzzer (-)"]
+        ESP_D25["ESP32: GPIO 25"] -->|"220 Ω"| LED_R["LED RGB: Rojo"]
+        ESP_D26["ESP32: GPIO 26"] -->|"220 Ω"| LED_G["LED RGB: Verde"]
+        ESP_D27["ESP32: GPIO 27"] -->|"220 Ω"| LED_B["LED RGB: Azul"]
+        ESP_GND4["ESP32: GND"] --- LED_CAT["Cátodo Común"]
+    end
+```
