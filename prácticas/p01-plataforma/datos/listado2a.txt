@@ -1,0 +1,129 @@
+El Sketch usa 285616 bytes (21%) del espacio de almacenamiento de programa. El máximo es 1310720 bytes.
+Las variables Globales usan 22116 bytes (6%) de la memoria dinámica, dejando 305564 bytes para las variables locales. El máximo es 327680 bytes.
+python3 "/Users/lizettig/Library/Arduino15/packages/esp32/hardware/esp32/3.3.12/tools/flasher.py" --esptool "/Users/lizettig/Library/Arduino15/packages/esp32/tools/esptool_py/5.3.1/esptool" --build-dir "/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1" --chip esp32 --port "/dev/cu.usbserial-0001" --baud 921600  --before default-reset --after hard-reset write-flash  -z --flash-mode keep --flash-freq keep --flash-size keep 0x1000 "/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.bootloader.bin" 0x8000 "/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.partitions.bin" 0xe000 "/Users/lizettig/Library/Arduino15/packages/esp32/hardware/esp32/3.3.12/tools/partitions/boot_app0.bin" 0x10000 "/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.bin" 
+esptool v5.3.1
+Serial port /dev/cu.usbserial-0001:
+Connecting....
+Connected to ESP32 on /dev/cu.usbserial-0001:
+Chip type:          ESP32-D0WD-V3 (revision v3.1)
+Features:           Wi-Fi, BT, Dual Core + LP Core, 240MHz, Vref calibration in eFuse, Coding Scheme None
+Crystal frequency:  40MHz
+MAC:                c8:85:41:e3:70:5c
+
+Uploading stub flasher...
+Running stub flasher...
+Stub flasher running.
+Changing baud rate to 921600...
+Changed.
+
+Configuring flash size...
+
+Writing '/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.bootloader.bin' at 0x00001000...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Compressed 24992 bytes to 15998...
+
+Writing at 0x00001000 [                              ]   0.0% 0/15998 bytes... 
+
+Writing at 0x000071a0 [==============================] 100.0% 15998/15998 bytes... 
+Wrote 24992 bytes (15998 compressed) at 0x00001000 in 0.6 seconds (311.4 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing '/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.partitions.bin' at 0x00008000...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Compressed 3072 bytes to 146...
+
+Writing at 0x00008000 [                              ]   0.0% 0/146 bytes... 
+
+Writing at 0x00008c00 [==============================] 100.0% 146/146 bytes... 
+Wrote 3072 bytes (146 compressed) at 0x00008000 in 0.1 seconds (351.3 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing '/Users/lizettig/Library/Arduino15/packages/esp32/hardware/esp32/3.3.12/tools/partitions/boot_app0.bin' at 0x0000e000...
+Flash will be erased from 0x0000e000 to 0x0000ffff...
+Compressed 8192 bytes to 47...
+
+Writing at 0x0000e000 [                              ]   0.0% 0/47 bytes... 
+
+Writing at 0x00010000 [==============================] 100.0% 47/47 bytes... 
+Wrote 8192 bytes (47 compressed) at 0x0000e000 in 0.1 seconds (829.8 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Writing '/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.bin' at 0x00010000...
+Flash will be erased from 0x00010000 to 0x00055fff...
+Compressed 285760 bytes to 155438...
+
+Writing at 0x00010000 [                              ]   0.0% 0/155438 bytes... 
+
+Writing at 0x0001fbbe [==>                           ]  10.5% 16384/155438 bytes... 
+
+Writing at 0x000297d7 [=====>                        ]  21.1% 32768/155438 bytes... 
+
+Writing at 0x0002edf2 [========>                     ]  31.6% 49152/155438 bytes... 
+
+Writing at 0x00034935 [===========>                  ]  42.2% 65536/155438 bytes... 
+
+Writing at 0x00039c2e [==============>               ]  52.7% 81920/155438 bytes... 
+
+Writing at 0x0003f0cc [=================>            ]  63.2% 98304/155438 bytes... 
+
+Writing at 0x000448a6 [=====================>        ]  73.8% 114688/155438 bytes... 
+
+Writing at 0x0004d0dc [========================>     ]  84.3% 131072/155438 bytes... 
+
+Writing at 0x00052e61 [===========================>  ]  94.9% 147456/155438 bytes... 
+
+Writing at 0x00055c40 [==============================] 100.0% 155438/155438 bytes... 
+Wrote 285760 bytes (155438 compressed) at 0x00010000 in 3.0 seconds (764.1 kbit/s).
+Verifying written data...
+Hash of data verified.
+
+Hard resetting via RTS pin...
+
+
+lizettig@Lizetts-MacBook-Air ~ % /Users/lizettig/Library/Arduino15/packages/esp32/tools/esp-x32/2601/bin/xtensa-esp32-elf-size -A /Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.elf
+/Users/lizettig/Library/Caches/arduino/sketches/36691C4F9F67AA3AB77BF5938F3793D1/sketch_oct20a.ino.elf  :
+section                 size         addr
+.rtc.text                  0   1074528256
+.rtc.dummy                 0   1073217536
+.rtc.force_fast            0   1073217536
+.rtc_noinit                0   1342177792
+.rtc.force_slow           32   1342177792
+.rtc_fast_reserved        16   1073225712
+.rtc_slow_reserved        24   1342185448
+.iram0.vectors          1028   1074266112
+.iram0.text            62003   1074267140
+.dram0.data            16849   1073470304
+.ext_ram_noinit            0   1065353216
+.noinit                    3   1073487153
+.ext_ram.bss               0   1065353216
+.dram0.bss              5264   1073487160
+.flash.appdesc           256   1061158944
+.flash.rodata          68568   1061159200
+.eh_frame               3592   1061227768
+.flash.text           133320   1074593824
+.iram0.text_end            1   1074329143
+.iram0.data                0   1074329144
+.iram0.bss                 0   1074329144
+.dram0.heap_start          0   1073492424
+.debug_aranges         36568            0
+.debug_info          2358648            0
+.debug_abbrev         301367            0
+.debug_line          1424570            0
+.debug_frame           90792            0
+.debug_str            376332            0
+.debug_loc            462443            0
+.debug_ranges          72744            0
+.debug_line_str        12565            0
+.debug_loclists       114655            0
+.debug_rnglists        11896            0
+.comment                 149            0
+.xtensa.info              56            0
+.xt.prop                2328            0
+.xt.lit                   80            0
+Total                5556149
+
+
+
