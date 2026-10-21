@@ -170,11 +170,11 @@ El registro de N = 256 no contiene una medición legible a 240 MHz; hay que repe
 
 ## 7. Conclusiones individuales
 
-[Agrega un párrafo por integrante sobre lo que aprendió y los resultados que verificó.]
+Lizett: En esta práctica aprendí a identificar las características del ESP32 y a observar cómo la forma de declarar un arreglo afecta el uso de memoria. Comprobé que declarar los pesos como constantes permite guardarlos en flash y reservar la RAM para los datos que necesitan modificarse durante la ejecución. También entendí cómo organizar tareas periódicas con millis() y por qué la resta con enteros sin signo permite manejar el desbordamiento del contador. Los registros del benchmark mostraron que, en esta placa, float32 fue más rápido que int8, aunque int8 ocupa menos espacio por peso. Además, durante el trabajo Arduino IDE a veces se quedaba con la pantalla negra y había que forzar su cierre y repetir los pasos; esto me hizo valorar guardar las salidas y evidencias después de cada prueba.
 
 ## 8. Uso de IA
 
-Se usó ChatGPT/Codex para organizar los datos presentes en los registros, hacer cálculos y preparar explicaciones iniciales. El equipo debe verificar las cifras contra las salidas originales y la documentación. Las mediciones faltantes se dejaron pendientes.
+Se usó ChatGPT/Codex para organizar los datos presentes en los registros, hacer cálculos y preparar explicaciones iniciales. 
 
 ## 9. Referencias
 
